@@ -49,7 +49,7 @@ Add the following options to your project's `docker-compose.yml` file. Edit doma
 
 ```yml
 services:
-  webserver:
+  nginx:
     # ...
     labels:
       - "traefik.http.routers.nginx.rule=HostRegexp(`example.test`,`{subdomain:.+}.example.test`) && PathPrefix(`/`)"
