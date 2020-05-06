@@ -1,0 +1,4 @@
+tls:
+  certificates:
+    - certFile: /config/certificates/example.test+1.pem
+      keyFile: /config/certificates/example.test+1-key.pem

@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  traefik:
+    image: traefik:v2.2
+    command: --configFile=/config/traefik.yml
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./config:/config
+    networks:
+      - default
+      - traefik
+
+networks:
+  traefik:
+    name: traefik
+    driver: bridge
